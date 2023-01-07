@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Mobile App</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           
+        }
+
+        #header {
+            width: 100%;
+            height: 90px;
+            background-color: black;
+        }
+
+        #header h1 {
+            color: aliceblue;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        #header p {
+            color: aliceblue;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        #forip {
+            width: 80%;
+            height: 80px;
+           
+            margin: auto;
+            display: flex;
+            align-items: center;
+            background-color: #7abfe7;
+            background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+
+
+        }
+
+        #city {
+            padding: 5px 250px 5px 20px;
+            margin-left: 20px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        button {
+            padding: 6px 25px;
+            color: #F2F3F3;
+            font-weight: 600;
+            font-size: 15px;
+            border: 0px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            background-color: rgb(59, 40, 40);
+        }
+
+        #maincon {
+            width: 80%;
+            height: 300px;
+            background-color: #F2F3F3;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        #container {
+            width: 40%;
+            height: 300px;
+            background-color: white;
+            line-height: 30px;
+    
+        }
+
+        #main2{
+            width: 60%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        #month2{
+            color: #0093E9;
+            font-weight: 500;
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+
+        #city2{
+            color: black;
+            margin-left: 15px;
+           
+        }
+
+        #temp{
+
+            margin-left: 50px;
+            margin-top: 40px;
+        }
+
+        #feelslike{
+            margin-left: 15px;
+            font-weight: 500;
+            margin-top: 15px;
+
+        }
+        #humidity{
+
+            margin-left: 15px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+           
+        }
+        #temp_min{
+            margin-left: 15px;
+            margin-top: 15px;
+           
+        }
+        #temp_max{
+
+            
+           margin-left: 20px;
+            margin-top: 15px;
+
+
+        }
+        .mapouter {
+            position: absolute;
+            text-align: right;
+            height: 100%;
+            width: 300px;
+        }
+
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+
+        }
+
+        #gmap_canvas{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+    
+    </style>
+
+</head>
+
+<body>
+    <div id="header">
+        <h1><span> <img src="" alt=""></span> Weather Forecast </h1>
+        <p>by Nitin</p>
+    </div>
+    <div id="forip">
+        <input type="text" placeholder="Enter city name" id="city">
+        <button onclick="weatherfun()">Search</button>
+    </div>
+    <div id="maincon">
+        <div id="container">
+
+        
+        </div>
+
+        <div id="main2">
+        <div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe width="90%" height="80%" id="gmap_canvas" frameborder="0" scrolling="no" marginheight="0"
+                    marginwidth="0"></iframe>
+            </div>
+        </div>
+
+      
+</body>
+
+</html>
+<script src="./index.js"></script>
